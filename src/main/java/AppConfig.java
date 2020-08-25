@@ -3,6 +3,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Scope;
 
 import models.Cat;
+import models.HelloWorld;
 
 @Configuration
 public class AppConfig {
