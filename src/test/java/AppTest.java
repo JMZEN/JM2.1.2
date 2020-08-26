@@ -1,3 +1,5 @@
+import models.Cat;
+import models.HelloWorld;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -5,9 +7,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-
-import models.Cat;
-import models.HelloWorld;
 
 
 @RunWith(SpringJUnit4ClassRunner.class)
@@ -27,7 +26,7 @@ public class AppTest {
         Cat one = applicationContext.getBean(Cat.class);
         Cat two = applicationContext.getBean(Cat.class);
 
-        Assert.assertSame("Тест провален, не корректная настройка бина HelloWorld", tree, leaf);
+        Assert.assertSame("Тест провален, не корректная настройка бина models.HelloWorld", tree, leaf);
         Assert.assertNotSame("Тест провален, не корректная настройка бина Cat", one, two);
     }
 }
